@@ -7,7 +7,9 @@ Aplikace slouží pro analýzu jednoho či více obrázků zároveň. Program do
 
 ## Funkční specifikace
 
-Aplikace dokáže obrázky analyzovat a zároveň na ně aplikovat určité barevné filtry. Pracuje s nejčastějšími obrázkovými formáty (png, jpg, jpeg). Aplikace všechny funkce aplikuje buď na všechny obrázky naráz, nebo pouze na vybraný obrázek.
+- analýza obrázků + aplikace barevných filtrů
+- png, jpg, jpeg formáty
+- aplikace na všechny obrázky naráz nebo jen na jeden vybraný
 
 Uživatel má po zapnutí aplikace na výběr menu, zde je jeho přibližný popis:
 - `1` - načíst obsah složky `img` do paměti aplikace
