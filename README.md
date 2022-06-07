@@ -5,7 +5,9 @@ ___
 
 Aplikace slouží pro analýzu jednoho či více obrázků zároveň. Program dokáže vypsat veškeré informace o obrázku, jeho metadata tagy, histogram četnosti barev (i s vizualizací). Kromě vypisování informací dokáže aplikace dané obrázky také rozmazat, udělat je černobílé a invertovat jim barvy. Aplikace pracuje se zabudovanou pamětí obrázků, do které může uživatel libovolně načítat další obrázky známých přípon (`.png`, `.jpg`, `.jpeg`) ze složky `img`, která se nachází v rootu projektu. Uživatel si může v aplikaci vybrat, zda bude pracovat se všemi obrázky, nebo pouze s jedním vybraným.
 
-## Řešení
+## Funkční specifikace
+
+Aplikace dokáže obrázky analyzovat a zároveň na ně aplikovat určité barevné filtry. Pracuje s nejčastějšími obrázkovými formáty (png, jpg, jpeg). Aplikace všechny funkce aplikuje buď na všechny obrázky naráz, nebo pouze na vybraný obrázek.
 
 Uživatel má po zapnutí aplikace na výběr menu, zde je jeho přibližný popis:
 - `1` - načíst obsah složky `img` do paměti aplikace
@@ -28,11 +30,22 @@ Uživatel má po zapnutí aplikace na výběr menu, zde je jeho přibližný pop
     - `6` - vygenerovat invertovanou kopii obrázku
     - `7` - zpět
 
-Další informace:
+Informace o aplikaci:
 
 - v aplikaci jsou ve složce `img` vytvořeny 4 testovací obrázky
 - obrázky vygenerované aplikací se vždy uloží do stejné složky, jejich název se skládá z názvu původního obrázku podtržítko provedená akce (grey / blur / inverted)
     - např obrázek `vlk.png` se po provedení akce rozmazání bude jmenovat `vlk_blur.png`
+- histogram barev se zobrazuje společně s vizualizací a přesným vykreslením barvy
+
+Informace o filtrech:
+
+-  černobílý filtr barvu každého pixelu vypočítává pomocí součtu všech tří barevných složek (R,G,B) a vydělením třemi
+- filtr rozmazání používá metodu Gaussian blur, pro kterou vypočítává příslušnou matici s radiusem 4.5
+- filtr inverze barev každou barevnou složku (R,G,B) odečítá od 255, čímž vypočítá její inverzní hodnotu
+
+## Class diagram
+
+![Class diagram](https://www.arbystools.eu/storage/uploaded/5955.png)
 
 ## Požadavky
 
@@ -58,7 +71,7 @@ Další informace:
 17. Použití Vámi vybrané externí knihovny (audio, posílání emailů, práce s obrázkem, junit testování, jiné formáty uložení dat ...) ✓
 18. Javadoc - každá třída a metoda musí mít javadoc popis, abyste mohli na závěr vygenerovat javadoc dokumentaci ✓
 
-## Popis fungování externí knihovny
+## Příklad fungování externí knihovny
 
 
 1) [metadata-extractor](https://github.com/drewnoakes/metadata-extractor)

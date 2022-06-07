@@ -86,38 +86,6 @@ public class App extends Component {
                 {
                     System.exit(0);
                 }
-
-            }
-            System.out.println(validInput);
-        }
-    }
-
-    private static void print(Metadata metadata, String method)
-    {
-        System.out.println();
-        System.out.println("-------------------------------------------------");
-        System.out.print(' ');
-        System.out.print(method);
-        System.out.println("-------------------------------------------------");
-        System.out.println();
-
-        //
-        // A Metadata object contains multiple Directory objects
-        //
-        for (Directory directory : metadata.getDirectories()) {
-
-            //
-            // Each Directory stores values in Tag objects
-            //
-            for (Tag tag : directory.getTags()) {
-                System.out.println(tag);
-            }
-
-            //
-            // Each Directory may also contain error messages
-            //
-            for (String error : directory.getErrors()) {
-                System.err.println("ERROR: " + error);
             }
         }
     }
