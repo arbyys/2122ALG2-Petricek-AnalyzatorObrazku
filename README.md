@@ -45,6 +45,13 @@ Informace o filtrech:
 - filtr rozmazání používá metodu Gaussian blur, pro kterou vypočítává příslušnou matici s radiusem 4.5
 - filtr inverze barev každou barevnou složku (R,G,B) odečítá od 255, čímž vypočítá její inverzní hodnotu
 
+## Struktura souborů
+
+- složka `img/`
+    - binární soubory input (`.jpg`, `.png`, `.jpeg`) - obrázky k analýze
+    - binární soubory output (`.jpg`, `.png`, `.jpeg`) - obrázky s aplikovaným filtrem
+    - textové soubory output - metadata
+
 ## Class diagram
 
 ![Class diagram](https://www.arbystools.eu/storage/uploaded/5955.png)
@@ -77,6 +84,7 @@ Informace o filtrech:
 
 
 1) [metadata-extractor](https://github.com/drewnoakes/metadata-extractor)
+- slouží ke čtení metadat z příslušeného souboru
     ```java
     StringBuilder returnString = new StringBuilder();
     Metadata metadata = null;
@@ -89,6 +97,7 @@ Informace o filtrech:
     }
     ```
 2) [JColor](https://github.com/dialex/JColor)
+- slouží k obarvení výpisu do console
     ```java
     Attribute bkgColor = BACK_COLOR(255, 0, 0);
     System.out.print(colorize("červený text", bkgColor));
