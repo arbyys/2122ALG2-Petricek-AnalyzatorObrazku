@@ -75,7 +75,8 @@ public class Image implements IPatternImage {
      * @throws ImageProcessingException
      * @throws IOException
      */
-    public StringBuilder getMetadata() throws ImageProcessingException, IOException {
+    public StringBuilder getMetadata() throws ImageProcessingException, IOException
+    {
         StringBuilder returnString = new StringBuilder();
         Metadata metadata = null;
         metadata = ImageMetadataReader.readMetadata(new File(path));

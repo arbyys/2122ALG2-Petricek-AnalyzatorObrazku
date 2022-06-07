@@ -3,6 +3,7 @@ package ui;
 import app.Image;
 import app.ImageCollection;
 import com.diogonunes.jcolor.Attribute;
+import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Directory;
 import com.drew.metadata.Tag;
 import com.drew.metadata.Metadata;
@@ -201,7 +202,7 @@ public class App extends Component {
                 {
                     System.out.println(imageCollection.getMetadataAll());
                 }
-                catch(Exception e)
+                catch(IOException | ImageProcessingException exception)
                 {
                     System.out.println("Při čtení metadat se vyskytla chyba");
                 }
@@ -212,7 +213,7 @@ public class App extends Component {
                 {
                     imageCollection.saveMetadataAll();
                 }
-                catch(Exception e)
+                catch(IOException | ImageProcessingException exception)
                 {
                     System.out.println("Error při generování textového souboru");
                 }
@@ -224,7 +225,7 @@ public class App extends Component {
                     imageCollection.copyAndMakeGreyAll();
                     System.out.println("Černobílé obrázky byly úspěšně vygenerovány a uloženy");
                 }
-                catch(Exception e)
+                catch(IOException exception)
                 {
                     System.out.println("Při vytváření černobílého obrázku se vyskytla chyba");
                 }
@@ -236,7 +237,7 @@ public class App extends Component {
                     imageCollection.copyAndBlurAll();
                     System.out.println("Rozmazané obrázky byly úspěšně vygenerovány a uloženy");
                 }
-                catch(Exception e)
+                catch(IOException exception)
                 {
                     System.out.println("Při rozmazávání obrázku se vyskytla chyba");
                 }
@@ -248,7 +249,7 @@ public class App extends Component {
                     imageCollection.invertAll();
                     System.out.println("Invertované obrázky byly úspěšně vygenerovány a uloženy");
                 }
-                catch(Exception e)
+                catch(IOException exception)
                 {
                     System.out.println("Při invertování souboru se vyskytla chyba");
                 }
@@ -315,7 +316,7 @@ public class App extends Component {
                 {
                     System.out.println(imageCollection.getMetadataAll());
                 }
-                catch(Exception e)
+                catch(IOException | ImageProcessingException exception)
                 {
                     System.out.println("Při čtení metadat se vyskytla chyba");
                 }
@@ -326,7 +327,7 @@ public class App extends Component {
                 {
                     selectedImage.saveMetadata();
                 }
-                catch(Exception e)
+                catch(IOException | ImageProcessingException exception)
                 {
                     System.out.println("Error při generování textového souboru");
                 }
@@ -338,7 +339,7 @@ public class App extends Component {
                     selectedImage.copyAndMakeGrey();
                     System.out.println("Černobílé obrázky byly úspěšně vygenerovány a uloženy");
                 }
-                catch(Exception e)
+                catch(IOException exception)
                 {
                     System.out.println("Při vytváření černobílého obrázku se vyskytla chyba");
                 }
@@ -351,7 +352,7 @@ public class App extends Component {
                     selectedImage.copyAndBlur();
                     System.out.println("Rozmazané obrázky byly úspěšně vygenerovány a uloženy");
                 }
-                catch(Exception e)
+                catch(IOException exception)
                 {
                     System.out.println("Při rozmazávání obrázku se vyskytla chyba");
                 }
@@ -364,7 +365,7 @@ public class App extends Component {
                     selectedImage.copyAndInvert();
                     System.out.println("Invertované obrázky byly úspěšně vygenerovány a uloženy");
                 }
-                catch(Exception e)
+                catch(IOException exception)
                 {
                     System.out.println("Při invertování souboru se vyskytla chyba");
                 }
