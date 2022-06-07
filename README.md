@@ -3,7 +3,7 @@ ___
 
 ## Zadání práce
 
-Aplikace slouží pro analýzu jednoho či více obrázků zároveň. Program dokáže vypsat veškeré informace o obrázku, jeho metadata tagy, histogram četnosti barev (i s vizualizací). Kromě vypisování informací dokáže aplikace dané obrázky také rozmazat, udělat je černobílé a invertovat jim barvy. Aplikace pracuje se zabudovanou pamětí obrázků, do které může uživatel libovolně načítat další obrázky známých přípon (`.png`, `.jpg`, `.jpeg`) ze složky `img`, která se nachází v rootu projektu. Uživatel si může v aplikaci vybrat, zda bude pracovat se všemi obrázky, nebo pouze s jedním vybraným.
+Aplikace slouží pro analýzu jednoho či více obrázků zároveň. Program dokáže vypsat veškeré informace o obrázku, jeho metadata tagy, histogram četnosti barev (i s vizualizací). Kromě vypisování informací dokáže aplikace dané obrázky také rozmazat, udělat je černobílé a invertovat jim barvy. Aplikace pracuje se zabudovanou pamětí obrázků, do které může uživatel libovolně načítat další obrázky známých přípon (`.png`, `.jpg`, `.jpeg`) ze složky `img`, která se nachází v rootu projektu. Do této složky se i ukládají vygenerované obrázky + metadata. Uživatel si může v aplikaci vybrat, zda bude pracovat se všemi obrázky, nebo pouze s jedním vybraným.
 
 ## Funkční specifikace
 
