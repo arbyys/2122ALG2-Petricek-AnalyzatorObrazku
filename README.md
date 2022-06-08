@@ -51,6 +51,9 @@ Informace o filtrech:
     - binární soubory input (`.jpg`, `.png`, `.jpeg`) - obrázky k analýze
     - binární soubory output (`.jpg`, `.png`, `.jpeg`) - obrázky s aplikovaným filtrem
     - textové soubory output - metadata
+        - struktura: 
+            - nadpis: `\n\n metadata souboru %s:\n\n`
+            - každý další řádek = jedna hodnota ve formátu `[type] name - value`
 
 ## Class diagram
 
